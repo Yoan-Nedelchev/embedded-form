@@ -37,12 +37,11 @@
 // }
 
 export default async function handler(req, res) {
+  const secretUrlPart = process.env.FILTER_BY_DATE_URL;
+
   try {
     // Call your Google Apps Script Web App URL
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyJKFNZE26n9Gr60o4ZUQLzFfA13ppihdUQ9XqZyurAkRIJQcDyYapEJf-G7Hg4s6cefg/exec?date=2024-11-06",
-      { redirect: "follow" }
-    );
+    const response = await fetch(secretUrlPart, { redirect: "follow" });
     const data = await response.json();
     console.log(data);
     res // Send the data back to the client
