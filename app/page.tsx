@@ -5,6 +5,8 @@ export default function Home() {
   const [sheetdata, setSheetdata] = useState("");
 
   useEffect(() => {
+    console.log("hereheretest");
+
     async function fetchData() {
       const req = await fetch("/api/sheet");
       const res = await req.json();
