@@ -38,6 +38,7 @@
 
 export default async function handler(req, res) {
   const secretUrlPart = process.env.FILTER_BY_DATE_URL;
+  console.log("hereheretest");
 
   try {
     // Call your Google Apps Script Web App URL
