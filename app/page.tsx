@@ -329,7 +329,7 @@ export default function EntaseThreeStepAccordion() {
               />
             </button>
             <div
-              // @ts-ignore
+              // @ts-expect-error works ok
               ref={(el) => (contentRefs.current[`step-${index + 1}`] = el)}
               className='overflow-hidden transition-all duration-300 ease-in-out'
               style={{ maxHeight: "0px" }}
